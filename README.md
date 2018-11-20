@@ -42,5 +42,7 @@ pip install redis==2.10.6
 ```
 重启服务，可以看到正确结果了： 
 
-![](https://github.com/weizhimeng/celery-study/blob/master/1.png)
+![](https://github.com/weizhimeng/celery-study/blob/master/1.png) 
+可以看到，add函数需要等待5秒才返回执行结果，但由于它是一个异步任务，不会阻塞当前的主程序，所以print语句会直接打印出来而不用等待5秒。 
+
 
