@@ -41,5 +41,5 @@ AttributeError: 'float' object has no attribute 'iteritems'
 pip install redis==2.10.6
 ```
 重启服务，可以看到正确结果了：
-![image](url)
+![](https://github.com/weizhimeng/celery-study/blob/master/1.png)
 
