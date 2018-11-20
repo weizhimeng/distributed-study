@@ -1,5 +1,25 @@
 # celery-study
 celery分布式学习记录
+## 相关网址
+Celery 官网：http://www.celeryproject.org/
+
+Celery 官方文档英文版：http://docs.celeryproject.org/en/latest/index.html
+
+Celery 官方文档中文版：http://docs.jinkan.org/docs/celery/ 
+
+分布式队列神器 Celery：https://segmentfault.com/a/1190000008022050
+
+celery最佳实践：https://my.oschina.net/siddontang/blog/284107
+
+Celery 分布式任务队列快速入门：http://www.cnblogs.com/alex3714/p/6351797.html
+
+异步任务神器 Celery 快速入门教程：https://blog.csdn.net/chenqiuge1984/article/details/80127446
+
+定时任务管理之python篇celery使用：http://student-lp.iteye.com/blog/2093397
+
+异步任务神器 Celery：http://python.jobbole.com/87086/
+
+celery任务调度框架实践：https://blog.csdn.net/qq_28921653/article/details/79555212
 ## 环境搭建
 ```bash
 brew install redis
