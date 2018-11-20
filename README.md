@@ -26,6 +26,7 @@ brew install redis
 pip install redis
 pip install celery
 ```
+## 使用
 安装比较简单，之后先用redis-server & 命令后台开启redis服务(默认端口为6379)，然后写两个脚本测试
 ```python
 #tasks.py
@@ -63,6 +64,6 @@ pip install redis==2.10.6
 重启服务，可以看到正确结果了： 
 
 ![](https://github.com/weizhimeng/celery-study/blob/master/1.png) 
-可以看到，add函数需要等待5秒才返回执行结果，但由于它是一个异步任务，不会阻塞当前的主程序，所以print语句会直接打印出来而不用等待5秒。 
-
+可以看到，add函数需要等待5秒才返回执行结果，但由于它是一个异步任务，不会阻塞当前的主程序，所以print语句会直接打印出来而不用等待5秒。  
+将第一个脚本部署到其他服务器上，后一个脚本在本机运行即可实现一个最简单的分布式。
 
