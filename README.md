@@ -40,6 +40,6 @@ AttributeError: 'float' object has no attribute 'iteritems'
 ```bash
 pip install redis==2.10.6
 ```
-重启服务，可以看到正确结果了：
+重启服务，可以看到正确结果了： 
 ![](https://github.com/weizhimeng/celery-study/blob/master/1.png)
 
