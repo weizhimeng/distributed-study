@@ -1,5 +1,5 @@
-# celery-study
-celery分布式学习记录
+# distributed-study
+分布式学习记录
 ## 相关网址
 Celery 官网：http://www.celeryproject.org/
 
@@ -20,7 +20,7 @@ Celery 分布式任务队列快速入门：http://www.cnblogs.com/alex3714/p/635
 异步任务神器 Celery：http://python.jobbole.com/87086/
 
 celery任务调度框架实践：https://blog.csdn.net/qq_28921653/article/details/79555212
-## 环境搭建
+## 环境搭建(celery)
 ```bash
 brew install redis
 pip install redis
@@ -66,4 +66,16 @@ pip install redis==2.10.6
 ![](https://github.com/weizhimeng/celery-study/blob/master/1.png) 
 可以看到，add函数需要等待5秒才返回执行结果，但由于它是一个异步任务，不会阻塞当前的主程序，所以print语句会直接打印出来而不用等待5秒。  
 将第一个脚本部署到其他服务器上，后一个脚本在本机运行即可实现一个最简单的分布式。
+
+## 使用scrapy-redis
+安装后首先在settings.py中增加:
+```python
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+#去重机制
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+REDIS_HOST = '192.168.75.50'
+REDIS_PORT = 6379
+```
+然后就可以部署到不同服务器上了，使用命令scrapy crawl xx 即可开启分布式爬取，相比celery使用更简单。原理也很简单，原先的scrapy的request队列是单机的，所以只能单个主机跑，而以上设置就是将request队列存放到redis中，这下便可以多个主机通过网络共享爬取队列，再通过redis的去重处理，便可实现分布式爬取。
+
 
