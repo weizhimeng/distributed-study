@@ -93,7 +93,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-REDIS_URL = 'redis://root:Xc199704@47.106.37.156:6379'
+REDIS_URL = ' '
 
-MONGO_DB_URI = 'mongodb://47.106.37.156:27017'
+MONGO_DB_URI = ' '
 MONGO_DB_NAME = 'novel'
