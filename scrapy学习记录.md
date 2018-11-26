@@ -98,8 +98,8 @@ yield Request(url=url,meta={'au':copy.deepcopy(au)},callback=self.parse) #注意
 
 
 # ----------------华丽的分割线----------------
-![图1](https://github.com/weizhimeng/scrapy-study/blob/master/1.png)
-![图2](https://github.com/weizhimeng/scrapy-study/blob/master/2.png)
+![图1](https://github.com/weizhimeng/distributed-study/blob/master/2.png)
+![图2](https://github.com/weizhimeng/distributed-study/blob/master/3.png)
 
 要想深入学习scrapy,必须要先了解它的工作流程。从上图可以清楚看到整个框架的流程和各个模块的职能以及各自间的配合，传递的参数。
 ## Scrapy Engine(Scrapy引擎)
